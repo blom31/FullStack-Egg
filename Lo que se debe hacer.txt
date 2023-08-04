@@ -1,0 +1,34 @@
+Lo que se debe hacer:
+
+Seguir las convenciones de nomenclatura: Utiliza nombres de variables, métodos y clases descriptivos y en minúsculas (camelCase para variables y métodos, UpperCamelCase para clases). Esto ayuda a que tu código sea más legible y comprensible para otros desarrolladores.
+Comentar tu código: Incluye comentarios claros y concisos que expliquen el propósito y la lógica detrás de tu código. Esto facilita la comprensión y el mantenimiento del código en el futuro.
+Utilizar nombres descriptivos: Elige nombres significativos para tus variables y métodos que reflejen su función. Esto mejora la legibilidad y facilita el mantenimiento del código.
+Separar responsabilidades: Sigue el principio de "una clase, una responsabilidad" (Single Responsibility Principle). Divide tu código en clases y métodos cohesivos, cada uno con una única tarea o responsabilidad.
+Utilizar programación modular: Divide tu código en módulos lógicos y utiliza interfaces para establecer contratos entre ellos. Esto facilita la reutilización y el mantenimiento del código.
+Manejar excepciones adecuadamente: Utiliza bloques try-catch para capturar y manejar las excepciones de manera adecuada. Evita capturar excepciones genéricas como Exception y sé específico sobre las excepciones que estás tratando de manejar.
+Realizar pruebas unitarias: Implementa pruebas unitarias para verificar el comportamiento y la funcionalidad de tus clases y métodos. Esto ayuda a detectar errores y garantiza la calidad del código.
+
+Lo que no se debe hacer:
+
+Evitar el acoplamiento excesivo: No crees dependencias innecesarias entre clases y módulos. El acoplamiento excesivo dificulta la modificación y el mantenimiento del código.
+Evitar la duplicación de código: No copies y pegues bloques de código repetitivos. En su lugar, extrae el código duplicado en métodos o clases separadas y reutilízalo según sea necesario.
+No ignorar los principios de diseño: Familiarízate con los principios de diseño de software, como el principio de responsabilidad única (Single Responsibility Principle) y el principio de abierto/cerrado (Open/Closed Principle), y úsalos como guía para escribir código limpio y mantenible.
+No descuidar la gestión de recursos: Asegúrate de cerrar adecuadamente los recursos, como archivos o conexiones a bases de datos, utilizando bloques try-with-resources o asegurándote de cerrarlos explícitamente en un bloque finally.
+Evitar el uso excesivo de variables estáticas: No abuses del uso de variables estáticas, ya que pueden dificultar la prueba unitaria y aumentar el acoplamiento.
+No ignorar las convenciones de codificación: Sigue las convenciones de codificación estándar de Java, como indentación adecuada, uso de llaves en nuevas líneas, etc. Esto hace que tu código sea más legible y coherente.
+Evitar la falta de control de versiones: Utiliza un sistema de control
+Juan Silva  to  Everyone 19:17
+hola chicos
+Elias Barreto  to  Everyone 19:19
+Para aplicar el SRP en Java, puedes seguir algunas pautas:
+
+Identificar y definir claramente la responsabilidad principal de cada clase. Esto implica asegurarse de que cada clase tenga una única tarea o función bien definida.
+
+Evitar que las clases tengan múltiples responsabilidades. Si una clase tiene varias tareas o funciones, considera dividirla en varias clases más pequeñas, donde cada una tenga una responsabilidad única.
+
+Asegurarte de que cada clase se centre únicamente en su responsabilidad principal y no realice tareas adicionales que no estén relacionadas con su propósito principal. Esto ayuda a mantener la cohesión y reduce la complejidad de la clase.
+
+Aplicar el principio de alta cohesión y bajo acoplamiento. La alta cohesión implica que los miembros y métodos de una clase deben estar estrechamente relacionados y trabajar juntos para lograr el propósito de la clase. El bajo acoplamiento significa que las clases deben depender lo menos posible de otras clases, lo que permite una mayor flexibilidad y reutilización del código.
+
+Utilizar interfaces y abstracciones para desacoplar las dependencias entre las clases. Esto facilita la sustitución de implementaciones y promueve la flexibilidad y la extensibilidad del sistema.
+SRP = Single Responsibility Principle (principio de responsabilidad única)
