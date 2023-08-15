@@ -1,0 +1,66 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: chartreuse;
+}
+.eje1{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+}
+.ejer1{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: end;
+    color: rgb(125, 11, 139);
+}
+p {
+    font-size: large;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgb(94, 98, 102);
+    text-align: left;
+}
+.body3{
+    background-color: rgba(255, 127, 80, 0.637);
+}
+.header3{
+    margin-top: 5px;
+}
+.lista3{
+    color: rgb(60, 156, 148);
+}
+.ul3{
+    font-size: 1.5rem;
+}
+
+a .google:link{
+    color: red;
+}
+.google:visited{
+    color: rgb(97, 99, 98) ;
+}
+.google:hover{
+    background-color: red;
+    color: white;
+}
+.google:active{
+    color: black;
+}
+.ejer5{
+    padding-left: 1.6rem;
+    height: 100vh;
+    color: #059282;
+    background:linear-gradient(75deg, #0b0244, #140288, #120469,#036e62);
+}
+/* Ejer7 Crear un archivo HTML y un archivo CSS, vamos a linkear el archivo CSS al archivo HTML y
+vamos a hacer lo mismo que el primer ejercicio, pero ahora la página va a tener un color
+de fondo a elección, el encabezado H1 tiene que tener una fuente a elección y estar
+centrado, lo mismo para el encabezado H2, y por ultimo los párrafos deben tener una
+fuente a elección, deben tener un color a elección y deben estar centrados a la izquierda.*/
+
+/*Ejer8 Definir las reglas CSS que permiten mostrar los enlaces con los siguientes estilos:
+• En su estado normal, los enlaces se muestran de color rojo #CC0000.
+• Cuando el usuario pasa su ratón sobre el enlace, se muestra con un color de fondo
+rojo #CC0000 y la letra de color blanco #FFF.
+• Los enlaces visitados se muestran en color gris claro #CCC.*/
