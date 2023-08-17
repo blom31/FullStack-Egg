@@ -1,12 +1,16 @@
 /*const PI = 3.1416;*/
-let radio = parseInt(prompt("Ingrese el valor del radio de una circunferencia"));
+let radio = parseInt(
+  prompt("Ingrese el valor del radio de una circunferencia")
+);
 
 /*let area = PI * radio*radio;*/
-let area = Math.PI * radio**2;
+let area = Math.PI * radio ** 2;
 
-/*area= Math.round(area);  para redondear,*/ 
+/*area= Math.round(area);  para redondear,*/
 
-alert("el valor del área es: "+ area.toFixed(2));/*toFixed para definir la cantidad de decimales*/
+alert(
+  "el valor del área es: " + area.toFixed(2)
+); /*toFixed para definir la cantidad de decimales*/
 
 let peri = 2 * Math.PI * radio;
 
