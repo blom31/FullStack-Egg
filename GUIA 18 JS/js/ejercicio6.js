@@ -10,6 +10,7 @@ function validar(e) {
   e.preventDefault(); /*evito cualquier evento por defecto*/
 
   let nro = document.getElementById("nro").value;
+  
   /*let validar = /^[0-9]+$/; investigar */
   
   if (isNaN(parseInt(nro)) || parseInt(nro) < 0) {

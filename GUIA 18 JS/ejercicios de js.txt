@@ -24,7 +24,6 @@ límite inicial.
 8. Escribir un programa que lea números enteros hasta teclear 0 (cero). Al finalizar el
 programa se debe mostrar el máximo número ingresado, el mínimo, y el promedio de
 todos ellos.
-77
 9. Realizar un programa que pida una frase y el programa deberá mostrar la frase con un
 espacio entre cada letra. La frase se mostrara así: H o l a. Nota: recordar el
 funcionamiento de la función Substring().
