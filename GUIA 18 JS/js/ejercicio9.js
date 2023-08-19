@@ -4,12 +4,12 @@ document.getElementById("ejecutar").addEventListener("click",separar);
 /**
  * *validar que el campo frase no esté vacio y que contenga solo valores de tipo string*/
 function validar(e) {
-  e.preventDefault();
+  e.preventDefault();  /*previene que el boton envie los datos al servidorde forma automática*/
 
   let frase = document.getElementById("frase").value;
 
   /** 
-  * ? PROBAR IF TERNARIO frase === "" ? alert("Campo vacio") : alert ("Ingresa un valor válido");*/
+  * ? PROBAR IF TERNARIO frase === "" || !isNaN(frase) ? alert("Ingrese un valor"):alert ("Ingresa un valor válido");*/
   if (!isNaN(frase) || frase === "") {
     alert(
       "Ingrese un valor no numérico y no vacío \n Intente nuevamente");
