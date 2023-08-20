@@ -4,6 +4,7 @@ function validar(e) {
 
   let frase = document.getElementById("frase").value;
 
+  
   if (frase === "") {
     alert("El campo no puede estar vacio");
   }
@@ -18,5 +19,7 @@ const reverse = () => {
     let invertida = array.reverse(); //se invierte el array
     return devuelta.value = (invertida.join("")); //asigno el valor de invertida en el campo del formu y se usa la funcion join()
 }
+
+
 document.getElementById("formu").addEventListener("submit", validar);
 document.getElementById("ejecutar").addEventListener("click",reverse);
