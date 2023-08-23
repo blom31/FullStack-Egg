@@ -13,6 +13,3 @@ if (edad >= mayor) {
     /*console.log("No es mayor de edad");*/
     alert ("No eres mayor de edad") ;
 }
-
-
-/*console.log("hola ")*/
