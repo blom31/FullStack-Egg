@@ -1,73 +1,37 @@
 
-function ejecutarPrograma() {
-  let maximo = 0;
-  let minimo = 0;
-  let suma = 0;
-  let cantidadNumeros = 0;
-
-  function leerNumero() {
-    return parseInt(
-      prompt("Ingrese un número entero (ingrese 0 para terminar):")
-    );
-  }
-
-  while (true) {
-    const numero = leerNumero();
-
-    if (numero === 0) {
-      break;
+function comenzar() { /*esta función se llama desde el boton "comenzar" con el evento "onclick"*/
+  let sum = 0;
+  let num;
+  let numeros = [];
+  do {
+    num = parseInt(prompt("ingrese un numero")); /* se piden los números por un pront para almacenar en el array numeros*/
+    if (num !== 0) {
+      numeros.push(num); /*se van guardando los números dentro del array*/
+      sum += num;
     }
+  } while (num !== 0);
 
-    maximo = Math.max(maximo, numero);
-    minimo = Math.min(minimo, numero);
+  console.log(numeros)
 
-    suma += numero;
-    cantidadNumeros++;
+  if (numeros.length > 0) {
+    let max = document.getElementById("max");
+    let min = document.getElementById("min");
+    let prom = document.getElementById("prom");
+
+      max.value = Math.max(...numeros);
+      min.value = Math.min(...numeros);
+      prom.value = sum/numeros.length;
+
+   
+  } else {
+    alert("No se ingresaron números.");
   }
-
-  const promedio = suma / cantidadNumeros;
-
-  const resultados = document.getElementById("resultados");
-  maximo =document.getElementById("max");
-  minimo =document.getElementById("min");
-  promedio =document.getElementById("prom");
-  
-    max.value = maximo;
-}
-/*
-        // Inicializamos variables para almacenar el máximo, el mínimo y la suma de números.
-let maximo = 0;
-let minimo = 0;
-let suma = 0;
-let cantidadNumeros = 0;
-
-// Función para leer un número del usuario
-function leerNumero() {
-    return parseInt(prompt("Ingrese un número entero (ingrese 0 para terminar):"));
 }
 
-// Leer números hasta que se ingrese 0
-while (true) {
-    const numero = leerNumero();
-    
-    if (numero === 0) {
-        break; // Terminar el bucle si se ingresa 0
-    }
-    
-    // Actualizar máximo y mínimo
-    maximo = Math.max(maximo, numero);
-    minimo = Math.min(minimo, numero);
-    
-    // Sumar número a la suma total y aumentar contador
-    suma += numero;
-    cantidadNumeros++;
+function borrar() {
+  document.getElementById("max").value = "";
+  document.getElementById("min").value = "";
+  document.getElementById("prom").value = "";
 }
 
-// Calcular el promedio
-const promedio = suma / cantidadNumeros;
 
-// Mostrar resultados
-console.log("Máximo número ingresado:", maximo);
-console.log("Mínimo número ingresado:", minimo);
-console.log("Promedio de números ingresados:", promedio);
-*/

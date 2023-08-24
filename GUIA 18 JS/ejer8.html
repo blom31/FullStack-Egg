@@ -20,20 +20,26 @@
           el mínimo, y el promedio de todos ellos.
         </p>
       </div>
-<div class="container-fluid  col-md-6 text-dark">
+      <div class="container-fluid  col-md-6 text-dark">
       <h2>Programa de Números</h2>
       <p>Ingrese números enteros (0 para terminar):</p>
+      
       <div id="ingresar">
-        <button class="btn btn-success" onclick="ejecutarPrograma()">Ejecutar</button>
+
+        <button class="btn btn-success" id="comenzar" onclick="comenzar()">Comenzar</button>
         
-        <div id="resultados">
-          <label for="">Máximos nro Ingresado</label>
-          <input type="text" readonly name="max" ><br>
-          <label for="" class="my-3">Mínimo nro Ingresado</label>
-          <input type="text" readonly name="min" ><br>
-          <label for="">Promedio </label>
-          <input type="text" readonly name="prom" >
-        </div>
+          <label>Máximos nro Ingresado</label>
+          <input type="text" readonly  id="max" ><br>
+
+          <label class="my-3">Mínimo nro Ingresado</label>
+          <input type="text" readonly id="min" ><br>
+
+          <label>Promedio </label>
+          <input type="text" readonly id="prom" ><br>
+
+          <button type="button" value="Borrar" class="btn btn-warning " onclick="borrar()">Borrar</button>
+
+          
       </div>
       
 

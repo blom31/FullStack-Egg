@@ -1,9 +1,9 @@
 /*identifico la sección a trabajr*/
-const formulario = document.getElementById("formulario");
+//const formulario = document.getElementById("formulario");
 
 /*con el boton calcular se llama a la función validar nro ingresado*/
 document.getElementById("calcular").addEventListener("click", validar);
-document.getElementById("calcular").addEventListener("click",validarParImpar);
+/*document.getElementById("calcular").addEventListener("click",validarParImpar);*/
 /*valido el campo numero ingresado por el usuario*/
 
 function validar(e) {
@@ -11,7 +11,7 @@ function validar(e) {
 
   let nro = document.getElementById("nro").value;
   
-  /*let validar = /^[0-9]+$/; investigar */
+  /*let validar = /^[0-9]+$/; investigar*/
   
   if (isNaN(parseInt(nro)) || parseInt(nro) < 0) {
    /* valido que el campo sea numérico*/
@@ -21,6 +21,7 @@ function validar(e) {
       alert("Ingrese un número");
     }
   }
+  validarParImpar();
 }
 
 /*validar si el nro ingresado es par o impar*/
