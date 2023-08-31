@@ -33,3 +33,13 @@ const flecha = (argumento) => {
     return (tipoDAto.value = "string");
   }
 };
+//const miElemento = document.getElementById("miId"); // Obtén una referencia al elemento
+const contenidoHTML = miElemento.innerHTML; // Recupera el contenido HTML
+console.log(contenidoHTML);
+
+
+var isTrueSet = /^true$/i.test(myValue);
+// or
+var isTrueSet = (myValue?.toLowerCase?.() === 'true');
+// or
+var isTrueSet = (String(myValue).toLowerCase() === 'true');

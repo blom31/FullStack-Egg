@@ -11,7 +11,7 @@ function comenzar() { /*esta función se llama desde el boton "comenzar" con el 
     }
   } while (num !== 0);
 
-  console.log(numeros)
+  //console.log(numeros)
 
   if (numeros.length > 0) {
     let max = document.getElementById("max");
