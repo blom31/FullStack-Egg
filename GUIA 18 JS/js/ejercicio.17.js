@@ -15,3 +15,14 @@ function rellenar(e){
    document.getElementById("vector1").value= vector1.join(', ');
    document.getElementById("vector2").value= vector2.join(', ');
 }
+
+function eliminarUltimos() {
+    if (vector1.length >= 2 && vector2.length >= 2) {
+        vector1.splice(-2);
+        vector2.splice(-2);
+        document.getElementById("vector1").value = vector1.join(', ');
+        document.getElementById("vector2").value = vector2.join(', ');
+    } else {
+        alert("Los vectores no tienen suficientes elementos para eliminar.");
+    }
+}
