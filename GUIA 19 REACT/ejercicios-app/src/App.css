@@ -1,8 +1,7 @@
 #root {
-  height: 90vh;
+  height: 100vh;
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
   text-align: center;
 }
 
@@ -31,15 +30,6 @@
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 @media (prefers-reduced-motion: no-preference) {
   a:nth-of-type(2) .logo {
     animation: logo-spin infinite 20s linear;
@@ -60,16 +50,24 @@
   align-items: center;
 }
 .navbar{
-  height: 20vh;
+  height: vh;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
+  padding: .2em;
+}
+.ejercicio{
+  width: 80vw;
   padding: .3em;
+  margin-left: 3em;
+  text-align: left;
+  color: rgb(141, 213, 236);
 }
 .link{
   margin-right: 2em;
-  font-size: 2em;
+  font-size: 1.5em;
 }
 .footer{
-  padding: 5em;
+  height: 2em;
+  padding: 1em;
 }
