@@ -56,6 +56,16 @@
   justify-content: space-around;
   padding: .2em;
 }
+.navAdicional{
+  width: 85vw;
+  display: flex;
+  flex-direction: column;
+  margin-left: 34em;
+}
+.navAdicional a{
+  color: rgb(240, 157, 157);
+  font-size: 1.3em;
+}
 .ejercicio{
   width: 80vw;
   padding: .3em;
@@ -65,7 +75,7 @@
 }
 .link{
   margin-right: 2em;
-  font-size: 1.5em;
+  font-size: 1.7em;
 }
 .footer{
   height: 2em;

@@ -1,3 +1,5 @@
+import Ejer4_Footer from "./Ejer4_Footer";
+
 export default function Ejercicio4() {
   return (
     <div>
@@ -9,6 +11,8 @@ export default function Ejercicio4() {
         entre Main1 y Main2 dependiendo de la navegación. Para lograrlo se
         deberá instalar y usar React Router Dom.
       </p>
+        <Ejer4_Footer/>
+
     </div>
   );
 }

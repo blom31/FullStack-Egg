@@ -9,7 +9,9 @@ import Ejercicio1 from "./components/Ejercicio1";
 import Footer from "./components/Footer";
 import Ejercicio2 from "./components/Ejercicio2";
 import Ejercicio3 from "./components/ejercicio3/Ejercicio3";
-import Ejercicio4 from "./components/ejercicio3/ejercicio4/Ejercicio4";
+import Ejercicio4 from "./components/ejercicio4/Ejercicio4";
+import Ejer4_Menu1 from "./components/ejercicio4/Ejer4_Menu1";
+import Ejer4_Menu2 from "./components/ejercicio4/Ejer4_Menu2";
 
 function App() {
   
@@ -17,7 +19,7 @@ function App() {
       <BrowserRouter>
       <Header/>
       <Navbar/>
-        <Routes>
+      <Routes>
           <Route path="/" element={<Inicio />}></Route>
           {/*<Route path="/Principal2" element={<Principal2 />}></Route>
           <Route path="/producto/:id" element={<Principal2/>}></Route>
@@ -26,7 +28,8 @@ function App() {
           <Route path="/Ejercicio2" element={<Ejercicio2/>}></Route>
           <Route path="/Ejercicio3" element={<Ejercicio3/>}></Route>
           <Route path="/Ejercicio4" element={<Ejercicio4/>}></Route>
-          
+          <Route path="/Ejercicio4/Ejer4_Menu1" element={<Ejer4_Menu1 />} />
+          <Route path="/Ejercicio4/Ejer4_Menu2" element={<Ejer4_Menu2 />} />
         </Routes>
         <Footer/>
         </BrowserRouter>
