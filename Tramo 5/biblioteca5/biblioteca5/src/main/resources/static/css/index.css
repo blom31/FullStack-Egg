@@ -36,7 +36,9 @@
     background-size: cover;
     height: 550px;
     display: flex;
-    justify-content: end;
+    margin-left: 35em;
+    margin-top: 5em;
+    justify-content: center;
 }
 
 .contenedorLibros{
