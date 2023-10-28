@@ -110,7 +110,10 @@
                         <td th:text="${libro.titulo}"></th>
                         <td th:text="${libro.ejemplares}"></td>
                         <td th:text="${libro.autor.nombre}"></td>
-                        <th th:text="${libro.editorial.nombre}"></th>                    
+                        <th th:text="${libro.editorial.nombre}"></th> 
+                        <td>
+                            <a sec:authorize="hasRole('ADMIN')" ><i class="fas fa-feather-alt"></i> Modificar </a>
+                        </td>                
                     </tr>
 
                 </tbody>
@@ -132,7 +135,7 @@
             <section class="py-5 text-center container">
                 <div class="row py-lg-5">
                     <div class="col-lg-6 col-md-8 mx-auto">
-                        <a th:href="@{/inicio }" class="btn btn-primary my-2">Volver</a>
+                        <a th:href="@{/index}" class="btn btn-primary my-2">Volver</a>
                         </p>
                     </div>
                 </div>

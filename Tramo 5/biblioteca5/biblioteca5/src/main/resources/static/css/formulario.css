@@ -1,4 +1,15 @@
-.navBar{
+.fondo{
+    background-image: url(../img/FondoZoom_1.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+ 
+}
+.header{
+    text-align: center;
+    margin-top: 3em;
+}
+/*.navBar{
     background-color: #fff !important;
 }
 
@@ -22,7 +33,7 @@
     width: 40%;
     margin: auto;
 }
-
+*/
 
 .mensajeExito{
     width: 20%;
@@ -36,12 +47,33 @@
     text-align: center;
 }
 
+.contenedor{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    margin-right: 13em;
+}
 .formulario{
-    background-color: rgba(0, 47, 255, 0.432);
-    width: 50%;
-    margin: auto;
+    background-color: rgba(0, 255, 191, 0.473);
+    width: 35%;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    border-radius: 10px;
+}
+label{
+    margin-left: 1em;
+}
+
+.form-control{
+    width: 90%;
+    margin-left: 1em;
+}
+select{
+    margin-left: 1em;
+}
+.enviar{
+   text-align: center;
 }
 
 .divVolver{

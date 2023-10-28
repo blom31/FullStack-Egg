@@ -1,42 +1,46 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+
     <head>
         <meta charset="ISO-8859-1">
-        <title>Registro de Autores</title>
+        <title>Registro de Autor</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
         <link rel="stylesheet" href="../css/formulario.css">
     </head>
-    <body>
-        <header>
-            <div>
-            <h1>Carga del Autor</h1>
-        </div>
+    <body class="fondo">
+        <header class="header">
+            <h1>Cargar Autor</h1>
         </header>
         <div>
-            <form class="formulario"action="/autor/registro" method="POST">
+
+            <section class="contenedor">
+                <form class="formulario my-3"action="/autor/registro" method="POST">
                 
-                <div>
-                    <label>Nombre del Autor</label>
-                    <input type="text" class="" name="nombre" placeholder="Nombre del Autor">
-                 </div>
-                <div th:if="${error != null}" class="card text-white bg-danger mb-3 mensajeError" >
-                    <div class="card-body">
-                        <h5 class="card-title">Error 👎</h5>
-                        <p class="card-text" th:text="${error}"></p>
+                    <div>
+                        <label class="my-3">Nombre del Autor</label>
+                        <input type="text" class="form-control" name="nombre" placeholder="Nombre del Autor">
+                     </div>
+                    
+                    <br>
+                    <div class="enviar">
+                        <label>Enviar a la base de datos</label> <br/>
+                        <button type="submit" class="btn btn-primary my-3 boton" >Subir</button>
                     </div>
-                </div>
-                <div th:if="${exito != null}" class="card text-white bg-success mb-3 mt-3 mensajeExito" >
-                    <div class="card-body">
-                        <h5 class="card-title">Exito!</h5>
-                        <p class="card-text" th:text="${exito}"></p>
+                    <div th:if="${error != null}" class="card text-white bg-danger mb-3 mensajeError" >
+                        <div class="card-body">
+                            <h5 class="card-title">Error 👎</h5>
+                            <p class="card-text" th:text="${error}"></p>
+                        </div>
                     </div>
-                </div>
-                <br>
-                <div>
-                    <label>Enviar a la base de datos</label>
-                    <button type="submit" class="">Subir</button>
-                </div>
-            </form>
+                    <div th:if="${exito != null}" class="card text-white bg-success mb-3 mt-3 mensajeExito" >
+                        <div class="card-body">
+                            <h5 class="card-title">Exito!</h5>
+                            <p class="card-text" th:text="${exito}"></p>
+                        </div>
+                    </div>
+                </form>
+            </section>
+            
         
         </div>
         

@@ -4,9 +4,6 @@ package com.example.biblioteca5.controladores;
 import com.example.biblioteca5.excepciones.MiException;
 import com.example.biblioteca5.servicios.EditorialServicio;
 
-import antlr.collections.List;
-import com.example.biblioteca5.entidades.Editorial;
-
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,24 +18,27 @@ import org.springframework.web.bind.annotation.RequestParam;
 @RequestMapping("/editorial")
 public class EditorialControlador {
     @Autowired
-    private EditorialServicio editorialservicio;
+    private EditorialServicio editorialServicio;
     
     @GetMapping("/registrar")//localhost: 8080/autor/registrar
     public String registrar(){
         
         return "editorial_form.html";
     }  
+    
     @PostMapping("/registro")
-    public String registro(@RequestParam String nombre){
+    public String registro(@RequestParam String nombre, ModelMap modelo){
         
         try {
-            editorialservicio.crearEditorial(nombre);
+            editorialServicio.crearEditorial(nombre);
+            
+            modelo.put("exito", "La Editorial fue registrada correctamente!");
         } catch (MiException ex) {
-            Logger.getLogger(AutorControlador.class.getName()).log(Level.SEVERE, null, ex);
+                       
+            modelo.put("error", ex.getMessage());
             return "editorial_form.html";
         }
         
-        return "index.html";
+        return "index.html";        
     }
-
 }
