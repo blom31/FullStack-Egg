@@ -53,6 +53,11 @@ public class EditorialServicio {
             editorialRepositorio.save(editorial);
         }
     }
+
+    public Editorial getOne(String id){
+        return editorialRepositorio.getOne(id);
+    }
+    
     private void validar(String nombre) throws MiException {
         
         if (nombre.isEmpty() || nombre == null) {
