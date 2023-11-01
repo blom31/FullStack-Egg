@@ -9,7 +9,7 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface NoticiaRepositorio extends JpaRepository<Noticias, Long>{
-     @Query("SELECT n FROM Noticia n WHERE n.titulo = :titulo")
+     @Query("SELECT n FROM Noticias n WHERE n.titulo = :titulo")
     public Noticias buscarPorTitulo(@Param("titulo") String titulo);
     
 }
