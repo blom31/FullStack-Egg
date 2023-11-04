@@ -55,10 +55,10 @@ public class NoticiaServicio {
 
         
         if (titulo == null || titulo.isEmpty()) {
-            throw new MiExcepcion("campo no puede ser nulo ni vacio");
+            throw new MiExcepcion("El título no puede ser nulo ni vacio");
         }
         if (cuerpo == null || cuerpo.isEmpty()) {
-            throw new MiExcepcion("campo no puede ser nulo ni vacio");
+            throw new MiExcepcion("El cuerpo no puede ser nulo ni vacio");
         }
     }
 }

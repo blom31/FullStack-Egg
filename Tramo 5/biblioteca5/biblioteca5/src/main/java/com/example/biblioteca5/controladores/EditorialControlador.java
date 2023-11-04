@@ -58,7 +58,7 @@ public class EditorialControlador {
         
     }
     
-     @GetMapping("/modificar/{id}")
+    @GetMapping("/modificar/{id}")
     public String modificar(@PathVariable String id, ModelMap modelo) {
         modelo.put("editorial", editorialServicio.getOne(id));
 
