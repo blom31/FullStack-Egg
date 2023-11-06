@@ -1,9 +1,10 @@
 package com.example.biblioteca5.controladores;
 
+import com.example.biblioteca5.entidades.Usuario;
 import com.example.biblioteca5.excepciones.MiException;
 import com.example.biblioteca5.servicios.UsuarioServicio;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+
+import javax.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
@@ -74,19 +75,26 @@ public class PortalControlador { // localhost: 8080/
         }
     }
 
-    @GetMapping("/login")
-    public String login(@RequestParam(required = false)String error, ModelMap modelo) {
-        
-        if(error != null){
-            modelo.put("error", "Usuario o Contraseña invalidos¡");
-    }
+     @GetMapping("/login")
+    public String login(@RequestParam(required = false) String error, ModelMap modelo ) {
+
+        if (error != null) {
+            modelo.put("error", "Usuario o Contraseña invalidos!");
+        }
+
         return "login.html";
     }
     
     @PreAuthorize("hasAnyRole('ROLE_USER', 'ROLE_ADMIN')")
     @GetMapping("/inicio")
-    public String inicio(){
+    public String inicio(HttpSession session) {
         
-        return "inicio.html";
+        Usuario logueado = (Usuario) session.getAttribute("usuariosession");
+        
+        if (logueado.getRol().toString().equals("ADMIN")) {
+            return "redirect:/admin/dashboard";
+        }
+        
+           return "inicio.html";
     }
 }

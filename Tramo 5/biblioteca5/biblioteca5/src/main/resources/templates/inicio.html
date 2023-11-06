@@ -1,60 +1,21 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 
-    <head>
-        <title>Biblioteca Egg</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="../css/index.css">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" 
-              rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
-              crossorigin="anonymous">
-    </head>
+    <head th:replace="/fragments/head :: head"> </head>
     <body class="body">
         <header class="header" >
             <h1>App Biblioteca de Egg </h1>
+            
+            
         </header>
         <main >
-            <div class="nave my-4">
-                <nav class="nav flex-column">
-                    <li>
-                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Libros</a>
-                      <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                       <!-- <li><a class="dropdown-item"th:href="@{/libro/registrar}" >Crear Libro</a></li> -->
-                       
-                        <li><a class="dropdown-item" th:href="@{/libro/lista}" >Listar Libros</a></li> <!---->
-                      </ul>
-                    </li>
-                    <li>
-                      <a class="nav-link dropdown-toggle" href="" id="navbarDropdown2" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Autores
-                      </a>
-                      <ul class="dropdown-menu" aria-labelledby="navbarDropdown2">
-                        <!--<li><a class="dropdown-item"th:href="@{/autor/registrar}" >Crear Autor</a></li> <!---->
-                        
-                        <li><a class="dropdown-item"th:href="@{/autor/lista}" >Listar Autores</a></li> <!---->
-                      </ul>
-                    </li>
-
-                    <li>
-                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown3" role="button" data-bs-toggle="dropdown" aria-expanded="false">Editoriales</a>
-                      <ul class="dropdown-menu" aria-labelledby="navbarDropdown3">
-                      <!--  <li><a class="dropdown-item" th:href="@{/editorial/registrar}">Crear Editorial</a></li>-->
-                        
-                        <li><a class="dropdown-item" th:href="@{/editorial/lista}">Listar Editorial</a></li> 
-                      </ul>
-                    </li>
-                    <li>
-                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown3" role="button" data-bs-toggle="dropdown" aria-expanded="false">Perfil</a>
-                      <ul class="dropdown-menu" aria-labelledby="navbarDropdown3">
-                      <!--  <li><a class="dropdown-item" th:href="@{/editorial/registrar}">Crear Editorial</a></li>-->
-                        
-                        <li><a class="dropdown-item" href="/logout">Cerrar Sesión</a></li> 
-                      </ul>
-                    </li>
-                </nav>
-                  
+            
+            <div class="nave my-4"><br/>
+                <nav th:replace="/fragments/navbar :: nav"> </nav>
             </div>
+           <div class="usuario">
+                    <h3 th:if="${session.usuariosession != null}" th:text=" 'Hola '+ ${session.usuariosession.nombre} " ></h3>
+                </div>
         </main>
         
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>  

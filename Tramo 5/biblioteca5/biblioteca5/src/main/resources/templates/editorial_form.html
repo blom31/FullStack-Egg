@@ -20,8 +20,9 @@
                  </div>
                 <br>
                 <div class="enviar">
-                    <label>Enviar a la base de datos</label> <br/>
-                    <button type="submit" class="btn btn-primary my-3 boton">Subir</button>
+                        <label>Enviar a la base de datos</label> <br/>
+                        <button type="submit" class="btn btn-primary my-3 mx-5 boton" >Subir</button>
+                        <a th:href="@{/inicio }" class="btn btn-warning mx-5 my-2">Volver</a>
                 </div>
                 <div th:if="${error != null}" class="card text-white bg-danger mb-3 mensajeError" >
                     <div class="card-body">
