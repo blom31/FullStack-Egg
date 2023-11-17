@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-EggNewsApplication<eggNews>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.egg.eggNews.EggNewsApplication",
+            "projectName": "eggNews",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}

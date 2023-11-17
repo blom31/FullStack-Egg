@@ -45,7 +45,9 @@
     margin: auto;
     text-align: center;
 }
-
+.imgperfil{
+    background-color: aquamarine;
+}
 .contenedor{
     display: flex;
     align-items: center;

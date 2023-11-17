@@ -13,7 +13,7 @@
                         data-bs-toggle="dropdown" aria-expanded="false">
                         Autores
                     </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <li><a class="dropdown-item" sec:authorize="hasRole('ADMIN')" th:href="@{/autor/registrar}">Crear Autor</a></li>
 
                         <li><a class="dropdown-item" th:href="@{/autor/lista}">Listar Autores</a></li>
@@ -31,9 +31,19 @@
                 </li>
                 <li>
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown3" role="button"
-                        data-bs-toggle="dropdown" aria-expanded="false">Perfil</a>
+                        data-bs-toggle="dropdown" aria-expanded="false">Usuarios</a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown3">
+                        <li><a class="dropdown-item" sec:authorize="hasRole('ADMIN')"th:href="@{/usuario/registrar}">Crear Usuario</a></li>
 
+                        <li><a class="dropdown-item" th:href="@{/usuarios}">Listar Usuarios</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown3" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">Perfil</a>
+                    
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown3">
+                        <li><a class="dropdown-item" th:href="@{/perfil}">Editar Perfil</a></li>
                         <li><a class="dropdown-item" href="/logout">Cerrar Sesión</a></li>
                     </ul>
                 </li>

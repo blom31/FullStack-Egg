@@ -1,14 +1,7 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 
-<head>
-    <title>Biblioteca Egg</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/index.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-</head>
+<head th:replace="/fragments/head :: head"></head>
 
 <body class="body">
     <header class="header">
@@ -16,10 +9,17 @@
     </header>
     <main>
         <div class="nave my-4">
-            
              <nav th:replace="/fragments/navbar :: nav"> </nav>
-
         </div>
+        <div class="usuario">
+                    <h3 th:if="${session.usuariosession != null}" th:text=" 'Hola '+ ${session.usuariosession.nombre} " ></h3>
+            </div>
+        
+        <div class="imgperfil bg-info">
+                <a th:if="${session.usuariosession.imagen != null}" class="d-flex align-items-center">
+                    <img class="logo"  th:src="@{/imagen/perfil/__${session.usuariosession.id}__}" alt=" usuario" >
+                    </a>
+            </div>
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"

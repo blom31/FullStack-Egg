@@ -24,8 +24,15 @@
     background-color: #fff !important;
 }*/
 
+.imgperfil{
+    width: 200px;
+    height: 200px;
+    margin-left: 55em;
+}
 
-
+.imgperfil a img{
+    width: 100%;
+}
 .elementosNav{
     display: flex;
     width: 30%;
